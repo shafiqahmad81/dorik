@@ -55,7 +55,7 @@ button{
 
 @layer components{
   .btn{
-    @apply text-base text-white font-medium px-6 py-3 border border-[#5f54c7] bg-blue-primary rounded-ex-md flex items-center
+    @apply text-base text-white font-medium px-6 py-3 border border-[#5f54c7] bg-blue-primary rounded-ex-md flex items-center hover:bg-blue-primary/70 transition-all duration-500
   }
 }
 
