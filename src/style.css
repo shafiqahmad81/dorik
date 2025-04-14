@@ -23,6 +23,7 @@
   /* spacing */
   --spacing-1.4: 0.313rem;    /* 5px */
   --spacing-3.6: 0.938rem;    /* 15px */
+  --spacing-7.5: 1.875rem;       /* 30px */
 
   /* border radius */
   --radius-ex-md: 0.313rem;     /* 5px */
@@ -38,11 +39,25 @@ button{
 }
 
 @layer base{
+  h2{
+    @apply text-4xl md:text-5xl xl:text-[60px] xl:leading-[1] font-bricolage font-medium text-dark-primary tracking-[1px]
+  }
+  h3{
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-[50px] xl:leading-[1] text-dark-primary font-bricolage font-medium -tracking-[0.5px]
+  }
+  h5{
+    @apply text-2xl text-dark-primary font-bricolage leading-[1.3] font-medium tracking-wider
+  }
   h6{
     @apply text-xl leading-[1.4] text-dark-primary font-semibold
   }
 }
 
+@layer components{
+  .btn{
+    @apply text-base text-white font-medium px-6 py-3 border border-[#5f54c7] bg-blue-primary rounded-ex-md flex items-center
+  }
+}
 
 
 
