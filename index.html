@@ -12,14 +12,15 @@
 <body class="font-body">
 
   <!-- Header section -->
-  <header class="bg-forbackground-primary pt-5 p-1.4 sticky top-0 z-50">
+  <header class="bg-forbackground-primary pt-5 p-1.4 sticky top-0 z-50 border-b md:border-b-0 border-[#080a471a]">
     <div class="container ">
-      <div class="flex items-center justify-between">
+      <div class="flex items-start md:items-center justify-between">
         <a href="#" class="w-20 h-6 mb-3.6 block">
           <img src="src/assets/logo-dorik.svg" alt="">
         </a>
-        <div class="hidden md:block">
-          <ul class="flex items-center space-x-5 text-base text-dark-primary font-medium">
+        <div id="menu" class="hidden md:block">
+          <ul
+            class="inline-flex flex-col md:flex-row items-center space-x-5 space-y-5 md:space-y-0 text-base text-dark-primary font-medium pt-8 md:pt-0">
             <li><a class="hover:text-blue-primary transition-all duration-500" href="#">✨ Dorik AI</a></li>
             <li class="menu relative group">
               <a class="flex items-center hover:text-blue-primary transition-all duration-500" href="#">Product
@@ -30,7 +31,7 @@
                 </svg>
               </a>
               <ul
-                class="absolute top-7 left-0 rounded-ex-md bg-white w-[175px] shadow-[0_0_0_5px_white] text-base opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
+                class="absolute top-4 md:top-7 left-20 md:left-0 rounded-ex-md bg-white w-[175px] shadow-[0_0_0_5px_white] text-base opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50">
                 <li><a class="px-4 py-2 hover:bg-[#FFF8E0] block transition" href="#">White-Label
                     CMS</a>
                 </li>
@@ -61,7 +62,7 @@
                 </svg>
               </a>
               <ul
-                class="absolute top-7 left-0 rounded-ex-md bg-white w-[150px] shadow-[0_0_0_5px_white] text-base opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
+                class="absolute  top-4 md:top-7 left-24 md:left-0 rounded-ex-md bg-white w-[150px] shadow-[0_0_0_5px_white] text-base opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-50">
                 <li><a class="px-4 py-2 hover:bg-[#FFF8E0] block transition" href="#">Wall of Love</a>
                 </li>
                 <li><a class="px-4 py-2 hover:bg-[#FFF8E0] block transition" href="#">Blog</a></li>
@@ -74,24 +75,36 @@
               </ul>
             </li>
           </ul>
+          <div class="md:hidden flex flex-col items-center gap-3.6 mt-6 pb-5 text-sm font-medium text-blue-primary">
+            <a class="px-4 py-2 hover:text-dark-primary transition-all duration-500" href="#">Login</a>
+            <a class="border border-blue-primary rounded-ex-md  px-4 py-2 hover:text-dark-primary transition-all duration-500"
+              href="#">Sign Up</a>
+          </div>
         </div>
         <div class="hidden md:flex items-center gap-3.6 text-sm font-medium text-blue-primary">
           <a class="px-4 py-2 hover:text-dark-primary transition-all duration-500" href="#">Login</a>
           <a class="border border-blue-primary rounded-ex-md  px-4 py-2 hover:text-dark-primary transition-all duration-500"
             href="#">Sign Up</a>
         </div>
-        <div class="md:hidden">
+        <div id="hamburger-icon" class="md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+        <div id="close-icon" class="hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
         </div>
       </div>
     </div>
   </header>
 
+
   <!-- Hero section -->
-  <section class="relative bg-forbackground-primary border-t border-[#080a471a] mt-px">
+  <section class="relative bg-forbackground-primary md:border-t border-[#080a471a] mt-px">
     <div class="container text-center">
       <h1
         class="text-4xl sm:text-5xl lg:text-[4.438rem] lg:leading-[97%] -tracking-[0.125rem] font-bricolage font-bold text-dark-primary pt-10 lg:pt-20">
@@ -213,7 +226,7 @@
     </div>
   </section>
 
-  <!-- Transform Your Ideas into Reality with AI -->
+  <!-- Video play section -->
   <section class="bg-forbackground-primary pb-48">
     <div class="container">
       <div class="bg-contain bg-top bg-no-repeat flex pt-[7px] pb-10 w-full"
@@ -243,7 +256,7 @@
     </div>
   </section>
 
-  <!--  -->
+  <!-- Profile section -->
   <section class="">
     <div class="container pt-7.5">
       <div class="grid lg:grid-cols-3 items-center lg:items-start justify-center bg-white -mt-[150px]">
@@ -318,7 +331,8 @@
     </div>
   </section>
 
-  <section class="mt-[100px] mb-[60px]">
+  <!-- Website section -->
+  <section class="mt-14 lg:mt-[100px] mb-8 lg:mb-[60px]">
     <div class="container space-y-[60px]">
       <div class="bg-forbackground-primary p-5 rounded-ex-md -mx-5 flex flex-col justify-center">
         <div class="flex flex-col md:flex-row">
@@ -669,7 +683,8 @@
     </div>
   </section>
 
-  <section class="pt-20 pb-[100px]">
+  <!-- User details section -->
+  <section class="pt-14 lg:pt-20 pb-14 lg:pb-[100px]">
     <div class="container">
       <div class="flex flex-col lg:flex-row -mx-5">
         <div class="w-full lg:w-1/2 px-5">
@@ -712,7 +727,8 @@
     </div>
   </section>
 
-  <section class="bg-[#030521] pt-[120px]">
+  <!-- Beautiful design section -->
+  <section class="bg-[#030521] pt-14 sm:pt-20 lg:pt-[120px]">
     <div class="container">
       <div class="-mx-5">
         <div class="flex">
@@ -721,23 +737,23 @@
               Endless possibilities</h2>
           </div>
         </div>
-        <div class="pt-10 pb-20">
+        <div class="pt-10 pb-10 sm:pb-20">
           <div class="grid md:grid-cols-3">
             <div class="px-5">
-              <div class="p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a]">
-                <a class="py-2.5 text-2xl" href="#">Amazing Templates</a>
+              <div class="p-4 lg:p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a] h-full">
+                <a class="py-2.5 text-xl lg:text-2xl" href="#">Amazing Templates</a>
                 <p class="py-1.4">100+ Beautiful Templates</p>
               </div>
             </div>
-            <div class="px-5">
-              <div class="p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a]">
-                <a class="py-2.5 text-2xl" href="#">UI Blocks</a>
+            <div class="px-5 pt-5 md:pt-0">
+              <div class="p-4 lg:p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a] h-full">
+                <a class="py-2.5 text-xl lg:text-2xl" href="#">UI Blocks</a>
                 <p class="py-1.4">250+ Stunning UI Blocks</p>
               </div>
             </div>
-            <div class="px-5">
-              <div class="p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a]">
-                <a class="py-2.5 text-2xl" href="#">Elements</a>
+            <div class="px-5 pt-5 md:pt-0">
+              <div class="p-4 lg:p-7.5 px-5 text-[#d1d0db] border border-[#ffffff1a] h-full">
+                <a class="py-2.5 text-xl lg:text-2xl" href="#">Elements</a>
                 <p class="py-1.4">20+ Elements</p>
               </div>
             </div>
@@ -751,7 +767,7 @@
   </section>
 
   <!-- No Maintenance, More Freedom section -->
-  <section class="pt-[120px] pb-20">
+  <section class="pt-14 sm:pt-20 lg:pt-[120px] pb-14 lg:pb-20">
     <div class="container">
       <div class="-mx-5">
         <div class="px-5 text-center">
@@ -941,8 +957,9 @@
     </div>
   </section>
 
-  <!-- Affordable Pricing -->
-  <section class="bg-forbackground-primary pt-[120px] pb-[100px] mt-[100px]">
+  <!-- Affordable Pricing section -->
+  <section
+    class="bg-forbackground-primary pt-14 sm:pt-20 lg:pt-[120px] pb-14 sm:pb-20 lg:pb-[100px] mt-0 sm:mt-20 lg:mt-[100px]">
     <div class="container">
       <div class="flex flex-col items-center justify-center max-w-[66%] mx-auto text-center">
         <h2 class="py-4">Affordable Pricing</h2>
@@ -965,9 +982,8 @@
     </div>
   </section>
 
-  <!-- Extended Guides, Live Support & Community to help you -->
-
-  <section class="mt-[120px] mb-[100px]">
+  <!-- Extended Guides, Live Support & Community to help section -->
+  <section class=" mt-14 sm:mt-20 lg:mt-[120px] mb-14 sm:mb-20 lg:mb-[100px]">
     <div class="container">
       <div class="-mx-5">
         <div class="px-5">
@@ -1038,7 +1054,8 @@
   </section>
 
   <!-- Footer section -->
-  <section class="bg-[#030521] pt-[120px] mt-[122px] pb-7.5 bg-contain bg-top bg-no-repeat"
+  <section
+    class="bg-[#030521] pt-14 sm:pt-20 lg:pt-[120px] mt-14 sm:mt-20 lg:mt-[122px] pb-7.5 bg-contain bg-top bg-no-repeat"
     style="background-image: url(src/assets/icon/footer-bg.svg);">
     <div class="container ">
       <div class="-mx-5">
@@ -1126,12 +1143,13 @@
                 </ul>
               </div>
             </div>
-            <div class="px-5 col-span-2 lg:col-span-1">
+            <div class="px-5 col-span-3 lg:col-span-1">
               <div class="mt-7.5">
                 <h6 class="text-white mb-1.4">Partner Program</h6>
                 <p class="text-[#a2a1b7] text-base">Earn up to 40% recurring commission</p>
                 <ul>
-                  <li class="text-[#FFCC85] text-base hover:text-white transition-all "><a class="flex" href="#">Become
+                  <li class="text-[#FFCC85] text-base hover:text-white transition-all "><a class="flex items-center"
+                      href="#">Become
                       a Partner <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="feather feather-arrow-right ml-1" color="undefined">
@@ -1143,12 +1161,13 @@
             </div>
           </div>
         </div>
-        <div class="flex justify-between mt-7.5 text-sm text-[#a2a1b7]">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center sm:justify-between mt-7.5 text-sm text-[#a2a1b7]">
           <div class="px-5">
             <p>© 2024 Dorik, Inc. All rights reserved</p>
           </div>
           <div class="px-5">
-            <ul class="flex items-center gap-5">
+            <ul class="flex flex-col sm:flex-row items-center sm:gap-5">
               <li><a href="">Terms & Conditions</a></li>
               <li><a href="">Privacy Policy</a></li>
             </ul>
@@ -1157,6 +1176,7 @@
       </div>
     </div>
   </section>
+
   <script type="module" src="src/main.js"></script>
 </body>
 
